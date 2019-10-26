@@ -1,12 +1,15 @@
 from django.db import models
 
+from rooms.repository import RoomQuerySet
+
 
 class City(models.Model):
+    id = models.CharField(max_length=2, primary_key=True)
+
+    name = models.CharField(max_length=255)
+
     class Meta:
         verbose_name_plural = 'cities'
-
-    id = models.CharField(max_length=2, primary_key=True)
-    name = models.CharField(max_length=255)
 
 
 class Building(models.Model):
@@ -18,3 +21,5 @@ class Building(models.Model):
 class Room(models.Model):
     building = models.ForeignKey(Building, on_delete=models.CASCADE)
     gear_description = models.CharField(max_length=255)
+
+    objects = RoomQuerySet.as_manager()

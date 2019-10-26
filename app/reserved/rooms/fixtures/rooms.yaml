@@ -1,0 +1,18 @@
+- model: rooms.City
+  pk: ZA
+  fields:
+    id: ZA
+    name: Zamość
+
+- model: rooms.Building
+  pk: 1
+  fields:
+    city: ZA
+    address: Sadowa 1
+    name: Filharmonia
+
+- model: rooms.Room
+  pk: 1
+  fields:
+    building: 1
+    gear_description: 2 x Marshall 50W Tube Amp, Drums set, Vocal Column
