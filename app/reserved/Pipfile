@@ -5,6 +5,8 @@ verify_ssl = true
 
 [dev-packages]
 ipython = "*"
+django-stubs = "*"
+mypy = "*"
 
 [packages]
 django = "*"

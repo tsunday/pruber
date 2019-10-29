@@ -16,3 +16,23 @@
   fields:
     building: 1
     gear_description: 2 x Marshall 50W Tube Amp, Drums set, Vocal Column
+
+- model: rooms.Room
+  pk: 2
+  fields:
+    building: 1
+    gear_description: Drums set, Vocal Column
+
+- model: rooms.Building
+  pk: 2
+  fields:
+    city: ZA
+    address: Peowiaków 42
+    name: Piwnica
+
+- model: rooms.Room
+  pk: 3
+  fields:
+    building: 2
+    gear_description: Drums set, Vocal Column, Mic
+
