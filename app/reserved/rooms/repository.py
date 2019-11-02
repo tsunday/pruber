@@ -1,6 +1,9 @@
+from datetime import datetime
+
 from django.db.models import QuerySet
 
 
 class RoomQuerySet(QuerySet):
-    def available(self) -> QuerySet:
+    def available(self, dt_from: datetime, dt_to: datetime) -> QuerySet:
+        print(f'Qs filtered by from: {dt_from} to: {dt_to}')
         return self.filter(reservations__isnull=True)

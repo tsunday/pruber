@@ -1,5 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 
+from rooms.filters import AvailabilityFilterBackend
 from rooms.models import Room
 from rooms.serializers import RoomSerializer
 
@@ -10,5 +11,6 @@ class RoomViewSet(ModelViewSet):
 
 
 class EmptyRoomViewset(ModelViewSet):
-    queryset = Room.objects.available()
+    queryset = Room.objects.all()
     serializer_class = RoomSerializer
+    filter_backends = [AvailabilityFilterBackend]

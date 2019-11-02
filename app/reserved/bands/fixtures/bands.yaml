@@ -1,0 +1,5 @@
+- model: bands.Band
+  pk: 1
+  fields:
+    phone: 111
+    name: Intruder
