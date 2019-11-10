@@ -7,13 +7,15 @@ verify_ssl = true
 ipython = "*"
 django-stubs = "*"
 mypy = "*"
+pytest-django = "*"
+pytest-xdist = "*"
+tox = "*"
 
 [packages]
 django = "*"
 djangorestframework = "*"
 pyaml = "*"
 uritemplate = "*"
-dateutil = "*"
 
 [requires]
 python_version = "3.7"
