@@ -2,7 +2,7 @@ from django.db import models
 
 from bands.models import Band
 from rooms.models import Room
-from schedule.repository import ScheduleQuerySet
+from schedule.repository import ReservationQuerySet
 
 
 class Reservation(models.Model):
@@ -11,4 +11,4 @@ class Reservation(models.Model):
     datetime_from = models.DateTimeField()
     datetime_to = models.DateTimeField()
 
-    objects = ScheduleQuerySet.as_manager()
+    objects = ReservationQuerySet.as_manager()
