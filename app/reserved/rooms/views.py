@@ -1,4 +1,3 @@
-from django.db.models import QuerySet
 from rest_framework.viewsets import ReadOnlyModelViewSet
 
 from rooms.filters import AvailabilityFilterBackend
@@ -13,4 +12,3 @@ class RoomViewSet(ReadOnlyModelViewSet):
 
 class AvailableRoomViewSet(RoomViewSet):
     filter_backends = [AvailabilityFilterBackend]
-

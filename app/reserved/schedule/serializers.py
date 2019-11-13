@@ -7,3 +7,7 @@ class ReservationSerializer(ModelSerializer):
     class Meta:
         model = Reservation
         fields = '__all__'
+
+    def validate(self, data):
+        breakpoint()
+        return data
