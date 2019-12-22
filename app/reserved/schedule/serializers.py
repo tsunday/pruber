@@ -9,5 +9,4 @@ class ReservationSerializer(ModelSerializer):
         fields = '__all__'
 
     def validate(self, data):
-        breakpoint()
         return data
