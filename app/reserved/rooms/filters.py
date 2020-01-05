@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Any
 
 from django.db.models import QuerySet
 from rest_framework.exceptions import ValidationError
@@ -9,7 +10,7 @@ from rooms.services import RoomService
 
 
 class AvailabilityFilterBackend(BaseFilterBackend):
-    def filter_queryset(self, request: Request, queryset: QuerySet, view):
+    def filter_queryset(self, request: Request, queryset: QuerySet, view: Any) -> QuerySet:
         from_param = request.query_params.get('from', '')
         to_param = request.query_params.get('to', '')
         if not (from_param and to_param):
