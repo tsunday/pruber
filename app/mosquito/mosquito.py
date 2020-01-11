@@ -2,7 +2,7 @@ from flask import Flask
 from pymongo import MongoClient
 
 app = Flask(__name__)
-mongo = MongoClient('mongodb://root:pass@127.0.0.1')
+mongo = MongoClient('mongodb://root:pass@mongo')
 db = mongo.mosquito
 
 
