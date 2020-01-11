@@ -1,10 +1,15 @@
 from flask import Flask
+from pymongo import MongoClient
 
 app = Flask(__name__)
+mongo = MongoClient('mongodb://root:pass@127.0.0.1')
+db = mongo.mosquito
 
 
-@app.route('/')
-def register():
+@app.route('/active')
+def active():
+    active = db.active.find()
+    print(active)
     return {
-        'status': 'ok'
+        'result': [{'name': user['name']} for user in active]
     }

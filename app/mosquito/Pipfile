@@ -11,6 +11,7 @@ flake8 = "*"
 flask = "*"
 flask-sqlalchemy = "*"
 flask-marshmallow = "*"
+pymongo = "*"
 
 [requires]
 python_version = "3.7"
