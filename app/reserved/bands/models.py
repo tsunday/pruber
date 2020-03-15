@@ -9,3 +9,4 @@ class Band(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['phone', 'name'], name='unique_band')
         ]
+
